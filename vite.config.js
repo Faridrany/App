@@ -11,6 +11,12 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
+    // *** TAMBAHKAN BAGIAN INI ***
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'src', 'index.html'), // Menentukan entry point HTML
+      },
+    },
   },
   resolve: {
     alias: {
