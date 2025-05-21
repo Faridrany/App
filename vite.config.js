@@ -1,8 +1,10 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+
 import { VitePWA } from 'vite-plugin-pwa';
 
+// https://vitejs.dev/config/
 export default defineConfig({
   root: resolve(__dirname, 'src'),
   publicDir: resolve(__dirname, 'src', 'public'),
@@ -18,7 +20,13 @@ export default defineConfig({
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'robots.txt', 'images/icons/*.png'],
+      includeAssets: [
+        'favicon.svg',
+        'robots.txt',
+        'images/icons/*.png',
+        'images/logo.png',
+        'favicon.png',
+      ],
       manifest: {
         name: 'EcoSortify',
         short_name: 'EcoSort',
