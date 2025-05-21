@@ -1,8 +1,9 @@
-import * as storyAPI from "../../data/api.js"
+import * as storyAPI from "../../data/api.js"; // Tetap perlu untuk kirim ke server
 import { ErrorMessageTemplate } from "../../templates.js";
 import Camera from "../../utils/Camera.js";
 import Map from "../../utils/Map.js";
 import CreateStoryPresenter from "./createStory-presenter.js";
+import db from "../../utils/db.js"; // Tambahkan ini kalau butuh simpan lokal
 
 export default class CreateStoryPage {
     #presenter = null;

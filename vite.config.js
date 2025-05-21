@@ -1,9 +1,8 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   root: resolve(__dirname, 'src'),
   publicDir: resolve(__dirname, 'src', 'public'),
@@ -17,14 +16,13 @@ export default defineConfig({
     },
   },
   plugins: [
-    tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'robots.txt', 'images/icons/*.png'],
       manifest: {
-        name: 'Your App Name',
-        short_name: 'AppShort',
-        start_url: '/',
+        name: 'EcoSortify',
+        short_name: 'EcoSort',
+        start_url: '/?source=pwa',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#4a90e2',
@@ -48,7 +46,7 @@ export default defineConfig({
       workbox: {
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/your-api-domain\.com\/api\//,
+            urlPattern: /^https:\/\/story-api\.dicoding\.dev\/v1\//,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'api-cache',
