@@ -1,3 +1,4 @@
 APP_URL='https://story-api.dicoding.dev/v1'
 MAP_SERVICE_API_KEY='lnuhAxbXLgkhiXPIgsjO'
 https://github.com/Faridrany/App.git
+https://velvety-druid-7c846b.netlify.app/
